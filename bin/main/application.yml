@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      database: contacts
+      uri: mongodb://localhost:27017
