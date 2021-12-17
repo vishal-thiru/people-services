@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PeopleDTO {
 
+	String pplId;
+	
 	String firstName;
 
 	String lastName;
