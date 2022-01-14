@@ -1,7 +1,9 @@
 package com.java.People.model;
 
 import java.io.Serializable;
+import java.util.UUID;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -17,11 +19,11 @@ public class People implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-//	@Id
-//	UUID peopleID;
-	
-	@Field("_id")
+	@Id
 	String _id;
+
+	@Field("PEOPLE_ID")
+	UUID peopleID;
 
 	@Field("NAME")
 	String firstName;

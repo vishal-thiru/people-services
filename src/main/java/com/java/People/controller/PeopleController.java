@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,7 +32,7 @@ public class PeopleController {
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 
-//	@PutMapping(value = "/contact", produces = { "application/json" }, consumes = { "application/json" })
+	@PutMapping(value = "/contact", produces = { "application/json" }, consumes = { "application/json" })
 	public ResponseEntity<People> updatecontact(@RequestBody PeopleDTO ppl) throws DataNotFoundException {
 		People response = pplService.update(ppl);
 		return new ResponseEntity<>(response, HttpStatus.OK);

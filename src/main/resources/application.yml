@@ -1,4 +1,9 @@
+server:
+  port: 8080
+
 spring:
+  application:
+    name= people-services
   data:
     mongodb:
       database: contacts

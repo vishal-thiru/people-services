@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PeopleDTO {
 
-	String pplId;
+	String peopleID;
 	
 	String firstName;
 

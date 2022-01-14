@@ -33,7 +33,7 @@ public class PeopleService {
 		people.setFirstName(request.getFirstName());
 		people.setLastName(request.getLastName());
 		people.setPhoneNumber(request.getPhoneNumber());
-		people.set_id(UUID.randomUUID().toString());
+		people.setPeopleID(UUID.randomUUID());
 		return people;
 	}
 
@@ -42,7 +42,7 @@ public class PeopleService {
 	}
 
 	public People update(PeopleDTO ppl) throws DataNotFoundException {
-		People inDB = repo.findByFirstName(ppl.getFirstName());
+		People inDB = repo.findPeopleForUpdate(ppl.getFirstName(), ppl.getLastName(), UUID.fromString(ppl.getPeopleID()));
 		if (inDB == null) {
 			throw new DataNotFoundException();
 		}
